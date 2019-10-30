@@ -5,7 +5,7 @@ class Tasks extends React.Component {
   public render() {
     if (process.env.REACT_APP_SCOPE === 'admin') {
       return (
-        <Button href="#" variant="primary" >
+        <Button href="/tasks" variant="primary" >
           Tasks
         </Button>
       );
