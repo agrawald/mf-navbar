@@ -22,10 +22,14 @@ class App extends React.Component {
     this.setState({ ...this.state, template: template });
   }
 
+  componentDidCatch(error: any, info: any) {
+    console.error("NavBar Micro-app: " + info, error)
+  }
+
   public render() {
     return (
       <Navbar bg="light" expand="lg">
-        <Navbar.Brand href="#home">Chess UI</Navbar.Brand>
+        <Navbar.Brand href="/">Chess UI</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto"></Nav>
