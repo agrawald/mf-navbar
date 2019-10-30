@@ -1,11 +1,8 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import App from './App';
-// import * as serviceWorker from './registerServiceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import singleSpaReact from 'single-spa-react';
-
-// ReactDOM.render(<App />, document.getElementById('root') as HTMLElement);
 
 const reactLifecycles = singleSpaReact({
   React,
@@ -30,4 +27,3 @@ function domElementGetter() {
 
   return el;
 }
-// serviceWorker.unregister();
