@@ -20,7 +20,7 @@ class App extends React.Component<any, IState> {
   }
 
   componentDidMount() {
-    fetch('http://localhost:8080/template?scope=' + this.state.scope)
+    fetch('http://'+process.env.REACT_APP_TEMPLATE_URL+'/template?scope=' + this.state.scope)
       .then(res => res.json())
       .then(data => {
         this.setState({ template: data });
