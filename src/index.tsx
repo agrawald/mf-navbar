@@ -11,11 +11,20 @@ const reactLifecycles = singleSpaReact({
   domElementGetter
 });
 
-export const bootstrap = [reactLifecycles.bootstrap];
+export function bootstrap(props: any) {
+  console.log(props);
+  return reactLifecycles.bootstrap(props);
+}
 
-export const mount = [reactLifecycles.mount];
+export function mount(props: any) {
+  console.log(props);
+  return reactLifecycles.mount(props);
+}
 
-export const unmount = [reactLifecycles.unmount];
+export function unmount(props: any) {
+  console.log(props);
+  return reactLifecycles.unmount(props);
+}
 
 function domElementGetter() {
   let el = document.getElementById('navbar');
